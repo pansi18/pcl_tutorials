@@ -1,0 +1,32 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}",
+                "/usr/include/pcl-1.7",   
+                "/usr/include",             
+                "/usr/include/vtk-6.2",
+                "/usr/include/qhull",
+                "/usr/include/flann",
+                "/usr/include/boost",
+                "/usr/include/eigen3",
+                "/usr/include/eigen3/Eigen/", 
+                "/usr/include/x86_64-linux-gnu/sys"
+            ],
+            "defines": [],
+            "browse":{
+                "path":[
+                    "/usr/include",
+                    "/usr/include/pcl-1.7"
+                ]
+            },
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

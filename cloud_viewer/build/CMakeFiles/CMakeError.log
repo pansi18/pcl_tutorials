@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/pansi/pcl_user_code/cloud_viewer/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_59f9a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_59f9a.dir/build.make CMakeFiles/cmTC_59f9a.dir/build
+make[1]: Entering directory '/home/pansi/pcl_user_code/cloud_viewer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_59f9a.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_59f9a.dir/CheckSymbolExists.c.o   -c /home/pansi/pcl_user_code/cloud_viewer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_59f9a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_59f9a.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_59f9a.dir/CheckSymbolExists.c.o  -o cmTC_59f9a -rdynamic 
+CMakeFiles/cmTC_59f9a.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_59f9a.dir/build.make:97: recipe for target 'cmTC_59f9a' failed
+make[1]: *** [cmTC_59f9a] Error 1
+make[1]: Leaving directory '/home/pansi/pcl_user_code/cloud_viewer/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_59f9a/fast' failed
+make: *** [cmTC_59f9a/fast] Error 2
+
+File /home/pansi/pcl_user_code/cloud_viewer/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/pansi/pcl_user_code/cloud_viewer/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1776e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1776e.dir/build.make CMakeFiles/cmTC_1776e.dir/build
+make[1]: Entering directory '/home/pansi/pcl_user_code/cloud_viewer/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1776e.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_1776e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_1776e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1776e.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_1776e.dir/CheckFunctionExists.c.o  -o cmTC_1776e -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_1776e.dir/build.make:97: recipe for target 'cmTC_1776e' failed
+make[1]: *** [cmTC_1776e] Error 1
+make[1]: Leaving directory '/home/pansi/pcl_user_code/cloud_viewer/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_1776e/fast' failed
+make: *** [cmTC_1776e/fast] Error 2
+
+
